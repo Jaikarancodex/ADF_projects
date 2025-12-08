@@ -1,13 +1,13 @@
-# Mixed File Format to Parquet Pipeline – Step-by-Step Guide
+# 💥 Mixed File Format to Parquet Pipeline – Step-by-Step Guide
 
-## Overview
+## ⚡ Overview
 This project processes **CSV, JSON, and Parquet files** from a `raw` folder and converts everything into **Parquet** format inside an `output` folder using **Azure Data Factory (ADF)**.
 
 ---
 
-## 1. Create Required Datasets
+## ✔ 1. Create Required Datasets
 
-### 1.1 DS_CCSV (DelimitedText)
+### ✅ 1.1 DS_CCSV (DelimitedText)
 - Format: **DelimitedText**
 - Parameters:
   - `folderPath`
@@ -17,7 +17,7 @@ This project processes **CSV, JSON, and Parquet files** from a `raw` folder and 
   - File → `@dataset().fileName`
 - Header: **True**
 
-### 1.2 DS_JSON (JSON)
+### ✅ 1.2 DS_JSON (JSON)
 - Format: **JSON**
 - Parameters:
   - `folderPath`
@@ -26,13 +26,13 @@ This project processes **CSV, JSON, and Parquet files** from a `raw` folder and 
   - Folder path → `@dataset().folderPath`
   - File → `@dataset().fileName`
 
-### 1.3 DS_PARQUET (Parquet)
+### ✅ 1.3 DS_PARQUET (Parquet)
 - Format: **Parquet**
 - Parameters:
   - `folderPath`
   - `fileName`
 
-### 1.4 DS_PARQUET_OUT (Parquet Output)
+### ✅ 1.4 DS_PARQUET_OUT (Parquet Output)
 - Format: **Parquet**
 - Parameters:
   - `folderPath`
@@ -40,9 +40,9 @@ This project processes **CSV, JSON, and Parquet files** from a `raw` folder and 
 
 ---
 
-## 2. Create Pipeline
+## ✔ 2. Create Pipeline
 
-### 2.1 Add Get Metadata Activity
+### ✅ 2.1 Add Get Metadata Activity
 Name: **Get_File_List**
 
 - Dataset: **DS_CSV**
@@ -55,7 +55,7 @@ This retrieves all file names inside the `raw` folder.
 
 ---
 
-## 3. Add ForEach Activity
+## ✔ 3. Add ForEach Activity
 
 ### Settings
 Items:
@@ -65,7 +65,7 @@ Items:
 
 ---
 
-## 4. Add Switch Activity
+## ✔ 4. Add Switch Activity
 Expression:
 ```
 @toLower(last(split(item().name, '.')))
@@ -73,7 +73,7 @@ Expression:
 
 ---
 
-## 5. Add Cases
+## ✔ 5. Add Cases
 
 ### CSV Case
 Input:
