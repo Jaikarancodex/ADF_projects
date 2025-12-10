@@ -1,4 +1,4 @@
-# 🧩 Sales Data Quality Engine – Azure Data Factory (End-to-End Project)
+# 🚀 Sales Data Quality Engine – Azure Data Factory (End-to-End Project)
 
 A complete walkthrough to build a Data Quality (DQ) engine using Azure Data Factory that:
 
