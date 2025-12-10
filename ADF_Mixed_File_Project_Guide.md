@@ -1,4 +1,4 @@
-# 💥 Mixed File Format to Parquet Pipeline – Step-by-Step Guide
+# 💥 Mixed File Format to Parquet Pipeline – Compressed Guide
 
 ## ⚡ Overview
 This project processes **CSV, JSON, and Parquet files** from a `raw` folder and converts everything into **Parquet** format inside an `output` folder using **Azure Data Factory (ADF)**.
