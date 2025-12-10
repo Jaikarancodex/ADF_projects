@@ -101,7 +101,7 @@ After creation → Launch Workspace → Compute → Create Cluster
 
 ---
 
-##✔️ 6. Give Databricks access to Storage (quick beginner option)
+## ✔️ 6. Give Databricks access to Storage (quick beginner option)
 
 **Portal**: Storage account → Access keys → copy Key 1
 In Databricks notebook we set the spark config using this key (for learning only). In production use Managed Identity or Service Principal + Key Vault.
@@ -338,7 +338,7 @@ Wait 5–20 seconds and check: ADF → Monitor → Pipeline runs. You should see
 
 ---
 
-## ✔️ 13. Troubleshooting checklist✅
+## ✔️ 13. Troubleshooting checklist🧪
 
 * Trigger not firing: confirm trigger status is Enabled (ADF → Manage → Triggers)
 * Event Subscription prefix: Storage account → Events → ensure prefix shows `raw/`
